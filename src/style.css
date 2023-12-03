@@ -9,3 +9,7 @@ body {
 .site-footer {
     background: #666666;
 }
+
+.hidden {
+    display: none;
+}

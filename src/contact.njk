@@ -1,0 +1,27 @@
+---
+title: Contact Us
+layout: 'base.njk'
+---
+<h1>Hi!</h1>
+<p>This is the contact form</p>
+
+<form name="contact" method="POST" action="/thankyou" netlify-honeypot="bot-field"
+data-netlify-recaptcha="true" netlify>
+    <p class="hidden">
+        <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+    </p>    
+
+    <p><label>Name</label></p>
+    <input type="text" name="name" />
+
+    <p><label>Email</label></p>
+    <input type="email" name="email" />
+
+    <p><label for="message">Message</label></p>
+    <textarea id="message" name="message" style="height:200px"></textarea>
+
+    <p><button type="submit">Send</button></p>
+
+</form>
