@@ -5,8 +5,11 @@ layout: 'base.njk'
 <h1>Hi!</h1>
 <p>This is the contact form</p>
 
-<form name="contact" method="POST" netlify-honeypot="bot-field"
-data-netlify-recaptcha="true" netlify>
+<form
+    name="contact"
+    method="POST"
+    netlify-honeypot="bot-field"
+    netlify>
     <p class="hidden">
         <label>
         Don’t fill this out if you’re human: <input name="bot-field" />
