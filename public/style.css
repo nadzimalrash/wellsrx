@@ -6,6 +6,7 @@
     --darkgrey: #1E1F1D;
     --strongaccent: #D43162;
     --darkaccent: #A2255C;
+    --lightaccent: #EC6C9C;
 }
 
 body {
@@ -13,15 +14,22 @@ body {
     margin: 0;
     background-color: var(--mediumgrey);
 }
-p, h4 {
+p {
     color: var(--lightgrey);
+    max-width: 80ch;
 }
-h1, h2, h3, .callout {
+h1, h2, h3, h4, .callout {
     color: white;
     text-shadow: 0 0 10px var(--mediumgrey);
 }
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 2.5em;
+}
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-transform: uppercase;
     margin: 4rem 0;
 }
@@ -29,12 +37,14 @@ h3 {
     font-size: 1.5rem;
     font-weight: 400;
 }
+h4 {
+    text-transform: uppercase;
+}
 .callout {
-    font-size: 2rem;
+    font-size: 1.75rem;
     max-width: min(768px, 100%);
     padding: 2.5em 0;
 }
-
 .content {
     max-width: 1080px;
     margin: auto;
@@ -44,9 +54,11 @@ main {
     min-height: 100vh;
 }
 .header-spacer {
-    padding-top: 10em;
+    padding-top: 3rem;
 }
 .btn {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: white;
     text-transform: uppercase;
@@ -56,8 +68,11 @@ main {
     border: 2px solid var(--strongaccent);
     transition: 0.5s;
     &:hover {
-        background-color: var(--darkaccent);
-        border: 2px solid var(--darkaccent);
+        background-color: var(--lightaccent);
+        border: 2px solid var(--lightaccent);
+        box-shadow: -1px -1px 31px -6px rgba(212,49,98,1);
+        -webkit-box-shadow: -1px -1px 31px -6px rgba(212,49,98,1);
+        -moz-box-shadow: -1px -1px 31px -6px rgba(212,49,98,1);
     }
 }
 .btn-primary {
@@ -69,6 +84,9 @@ main {
 @media (max-width: 550px) {
     .content {
         padding: 0 1em;
+    }
+    .header-spacer {
+        padding-top: 2rem;
     }
 }
 
@@ -132,6 +150,10 @@ main {
     font-weight: 700;
     color: var(--strongaccent);
     text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        color: var(--lightaccent);
+    }
 }
 .copyright {
     font-size: 0.8rem;
@@ -188,7 +210,8 @@ main {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
-    padding-bottom: 3em;
+    padding-top: 100px;
+    padding-bottom: 3rem;
 }
 .service-box {
     display: grid;
@@ -228,9 +251,20 @@ main {
     }
 }
 .advantages {
-    display: flex;
-    gap: 4em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    & h3 {
+        margin-top: 0;
+    }
 }
+.checkmark {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5em;
+}
+
+
 @media (max-width: 768px) {
     .service-box, .advantages {
         display: block;
@@ -251,7 +285,79 @@ main {
     text-align: center;
     & p {
         margin-bottom: 3em;
+        max-width: 100%;
     }
 }
 
 
+/* ABOUT US --------------------------------------------*/
+
+.mission {
+    margin: 3em 0;
+    & .callout {
+        padding: 1em;
+        border-left: 10px solid var(--strongaccent);
+    }
+}
+.values {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    & .value {
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+        padding: 0 0 1em 2em;
+    }
+}
+@media (max-width: 550px) {
+    .values {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
+
+/* CONTACT US --------------------------------------------*/
+
+.contact-form-section {
+    background: linear-gradient(90deg, var(--darkgrey) 50%, transparent 50%);
+    margin: 3em 0;
+    & .content {
+        background: var(--darkgrey);
+        max-width: 768px;
+    }
+}
+
+.contact-form {
+    padding: 2em;
+    margin: auto;
+    & label {
+        display: block;
+        padding: 0.5em 0;
+    }
+    & input, textarea {
+        width: 100%;
+        font-size: 1.25em;
+        padding: 0.5em;
+        border-radius: 2px;
+        border: none;
+        background-color: var(--lightgrey);
+    }
+    & input:focus, textarea:focus {
+        background-color: white;
+    }
+    & button {
+        margin-top: 1em;
+    }
+}
+.alt-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 550px) {
+    .alt-contact {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}

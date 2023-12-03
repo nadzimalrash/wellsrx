@@ -2,26 +2,58 @@
 title: Contact Us
 layout: 'base.njk'
 ---
-<h1>Hi!</h1>
-<p>This is the contact form</p>
+<section class="content header-spacer">
+    <h1>{{ title }}</h1>
+    <h3>How can WellsRX assist you?</h3>
+    <p>Let's discuss your fishing and recovery needs. We look forward to hearing from you. Simply submit the form below and our team will get back to you swiftly.</p>
+</section>
+<section class="contact-form-section">
+    <div class="content">
+        <form
+        class="contact-form"
+        name="contact"
+        method="POST"
+        action="/thankyou"
+        netlify-honeypot="bot-field"
+        netlify>
+        
+        <p class="hidden" style="display:none"><label>Don't fill this out if you're human:</label></p> 
+        <input name="bot-field"  style="display:none"/>   
 
-<form
-    name="contact"
-    method="POST"
-    action="/thankyou"
-    netlify-honeypot="bot-field"
-    netlify>
-    <p class="hidden" style="display:none"><label>Don’t fill this out if you’re human:</label></p> 
-    <input name="bot-field"  style="display:none"/>   
+        <p><label>Name</label>
+        <input type="text" name="name" /></p>
 
-    <p><label>Name</label></p>
-    <input type="text" name="name" />
+        <p><label>Email</label>
+        <input type="email" name="email" /></p>
 
-    <p><label>Email</label></p>
-    <input type="email" name="email" />
+        <p><label for="message">Message</label>
+        <textarea id="message" name="message" style="height:200px"></textarea></p>
 
-    <p><label for="message">Message</label></p>
-    <textarea id="message" name="message" style="height:200px"></textarea>
-
-    <p><button type="submit">Send</button></p>
-</form>
+        <p><button type="submit" class="btn btn-primary">Send Message</button></p>
+        </form>
+    </div>
+</section>
+<section class="content">
+    <div class="service-box">
+        <div class="service-name">
+            <h3>Join our Team</h3>
+        </div>
+        <div class="service-desc">
+            <p>Looking to take the next big step in your career? WellsRX is actively hiring at all levels and we are welcoming applications from anyone who believes in our mission.</p>
+            <p>Apply now by sending your CV to<br/>
+                <a class="email-link" href="mailto:careers@wellsrx.co">careers@wellsrx.co</a>
+            </p>
+        </div>
+    </div>
+    <div class="service-box">
+        <div class="service-name">
+            <h3>Partner with Us</h3>
+        </div>
+        <div class="service-desc">
+            <p>We have a never-ending search for technologies and solutions that help us achieve our goals. If you have a business opportunity or are looking for a representative, we are happy to hear from you.</p>
+            <p>Book an appointment with us at<br/>
+                <a class="email-link" href="mailto:supplychain@wellsrx.co">supplychain@wellsrx.co</a>
+            </p>
+        </div>
+    </div>
+</section>

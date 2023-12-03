@@ -2,5 +2,35 @@
 title: About Us
 layout: 'base.njk'
 ---
-<h1>Hi!</h1>
-<p>This is about page content</p>
+<section class="content header-spacer">
+    <h1>{{ title }}</h1>
+    <p>WellsRX Sdn. Bhd., founded in 2023, is a Malaysian, bumiputera-owned oilfield services company based in Mont Kiara, Kuala Lumpur.</p>
+    <div class="mission">
+        <h4>Mission Statement</h4>
+        <p class="callout">Our mission is to be the <strong>reference, high-performance</strong> oilfield services company that continuously exceeds our customers' expectations.</p>
+    </div>
+</section>
+<section class="content">
+    <p>The only way for us to achieve this is by...</p>
+    <div class="values">
+        <div class="value">
+            <h3>Delivering Excellence</h3>
+            <p>We promise all our work is performed by highly competent people with certified equipment through a stringent quality process. We always aim to raise our standards and set new benchmarks.</p>
+        </div>
+        <div class="value">
+            <h3>Practising Sustainability</h3>
+            <p>We help our customers reduce their carbon footprint by minimising rig time. We consume environmental resources responsibly. We care for the safety, health, and happiness of our people, customers, partners, and the community around us.</p>
+        </div>
+        <div class="value">
+            <h3>Building Trust</h3>
+            <p>We comply with laws, regulations, and standards. We conduct our business with uncompromising ethics, integrity, and governance. We set realistic expectations and proactively highlight risks. We are transparent and audit-ready at any moment.</p>
+        </div>
+        <div class="value">
+            <h3>Learning Constantly</h3>
+            <p>We concede that we are not perfect. We commit our people to training and provide a supportive environment for personal growth. We account for our setbacks and always do better than before. We stay informed about the best solutions for our customers.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% include './cta.njk' %}
