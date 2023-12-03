@@ -1,0 +1,11 @@
+body {
+    font-family: 'Figtree', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.site-header {
+    background: #cccccc;
+}
+.site-footer {
+    background: #666666;
+}
