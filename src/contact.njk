@@ -8,13 +8,11 @@ layout: 'base.njk'
 <form
     name="contact"
     method="POST"
+    action="/thankyou"
     netlify-honeypot="bot-field"
     netlify>
-    <p class="hidden">
-        <label>
-        Don’t fill this out if you’re human: <input name="bot-field" />
-        </label>
-    </p>    
+    <p class="hidden" style="display:none"><label>Don’t fill this out if you’re human:</label></p> 
+    <input name="bot-field"  style="display:none"/>   
 
     <p><label>Name</label></p>
     <input type="text" name="name" />
@@ -26,5 +24,4 @@ layout: 'base.njk'
     <textarea id="message" name="message" style="height:200px"></textarea>
 
     <p><button type="submit">Send</button></p>
-
 </form>
