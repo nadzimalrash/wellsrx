@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -178,19 +178,25 @@
     </main>
     <footer class="site-footer">
     <div class="footer-content content">
-            <a href="/index" class="nav-logo">
-                <img class="site-logo" src="../assets/site-logo.svg">
-            </a>        <div>
-            <p><a class="email-link" href="mailto:sales@wellsrx.co">sales@wellrx.co</a></p>
+        <a href="/index" class="nav-logo">
+            <img class="site-logo" src="../assets/site-logo.svg">
+        </a>
+        <div>
+            <p><a class="email-link" href="mailto:sales@wellsrx.co">sales@wellsrx.co</a></p>
             <p>
-                <strong>WellsRX Sdn. Bhd.</strong> (1513765-W)<br/>
-                23-1, Premier Suite, One Mont Kiara,<br/>
-                No. 1, Jalan Kiara, Mont Kiara,<br/>
-                50480 Kuala Lumpur, Malaysia.
+            <strong>WellsRX Sdn. Bhd.</strong> (1513765-W)<br/>
+            23-1, Premier Suite, One Mont Kiara,<br/>
+            No. 1, Jalan Kiara, Mont Kiara,<br/>
+            50480 Kuala Lumpur, Malaysia.
             </p>
-            <p class="copyright">© 2023. All rights reserved.</p>
+            <p class="copyright">© <span id="current-year"></span>. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
+<script>
+    const copyrightYear = document.querySelector("#current-year");
+    copyrightYear.innerHTML = new Date().getFullYear();
+</script>
 </body>
 </html>
