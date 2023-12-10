@@ -206,7 +206,10 @@ main {
 /* HOME --------------------------------------------*/
 
 .home-atf {
-    background-image: url("./assets/wireframe-oshot-1.webp");
+    background-image: url("./assets/wireframe-oshot-1.png");
+    @supports (background-image: url("./assets/wireframe-oshot-1.webp")) {
+        background-image: url("./assets/wireframe-oshot-1.webp");
+    }
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
@@ -228,16 +231,28 @@ main {
     }
 }
 .service-fishing {
-    background-image: url("./assets/wireframe-oshot-2.webp");
+    background-image: url("./assets/wireframe-oshot-2.png");
+    @supports (background-image: url("./assets/wireframe-oshot-2.webp")) {
+        background-image: url("./assets/wireframe-oshot-2.webp");
+    }
 }
 .service-casingexits {
-    background-image: url("./assets/wireframe-whipstock.webp");
+    background-image: url("./assets/wireframe-whipstock.png");
+    @supports (background-image: url("./assets/wireframe-whipstock.webp")) {
+        background-image: url("./assets/wireframe-whipstock.webp");
+    }
 }
 .service-wbcu {
-    background-image: url("./assets/wireframe-scraper.webp");
+    background-image: url("./assets/wireframe-scraper.png");
+    @supports (background-image: url("./assets/wireframe-scraper.webp")) {
+        background-image: url("./assets/wireframe-scraper.webp");
+    }
 }
 .service-thrutbg {
-    background-image: url("./assets/wireframe-junkmill.webp");
+    background-image: url("./assets/wireframe-junkmill.png");
+    @supports (background-image: url("./assets/wireframe-junkmill.webp")) {
+        background-image: url("./assets/wireframe-junkmill.webp");
+    }
 }
 .more-info {
     color: var(--lightgrey);
@@ -281,7 +296,8 @@ main {
     background-size: cover;
     backdrop-filter: opacity(0.2);
     padding: 3em 0 1em 0;
-    margin: 5em 0;
+    margin: 5em auto;
+    max-width: 1920px;
     text-align: center;
     & p {
         margin-bottom: 3em;
